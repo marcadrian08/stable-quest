@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Horses · Stable Quest</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/color.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/myHorses.css" />
+</head>
+
+<body class="home">
+  <!-- Navbar (same as home) -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light bg-opacity-75 fixed-top">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand fw-bold" href="index.html">Stable Quest</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="myHorses.html">My Horses</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html">Gacha</a></li>
+          <li class="nav-item"><a class="nav-link" href="wellnessChallenge.html">Challenges</a></li>
+          <li class="nav-item"><a class="nav-link" href="badge.html">Achievements</a></li>
+          <li class="nav-item" id="navLogin"><a class="nav-link" href="login.html">Login</a></li>
+          <li class="nav-item" id="navRegister"><a class="nav-link" href="register.html">Register</a></li>
+          <li class="nav-item d-none" id="navProfile"><a class="nav-link" href="profile.html">Profile</a></li>
+          <li class="nav-item d-none" id="navLogout"><a class="nav-link" href="#" id="logoutBtn">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="pageHeader">
+  <div class="container-fluid px-4 px-lg-5">
+    <div class="d-flex flex-column align-items-center gap-2 text-center">
+      <div class="text-center text-md-start">
+        <h1 class="mb-0">My Stable</h1>
+        <p class="text-muted mb-0">View, train, or release your horses ✨</p>
+      </div>
+
+      <!-- coins pill -->
+      <div class="coinsPill">
+        Coins: <span id="displayCoins" class="fw-bold">0</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container-fluid px-4 px-lg-5 stableWrap">
+  <div id="alertBox" class="alert alert-info" role="alert"></div>
+
+  <section class="stableSection bg-softgreen">
+    <div class="stableInner">
+      <div id="myHorsesList" class="horseGrid">
+        <p class="text-muted text-center">Loading your horses...</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+  <!-- Footer (same as home) -->
+  <footer class="mt-auto py-4">
+    <div class="container text-center">
+      <p class="mb-1">Horse Racing Championship © 2026</p>
+      <p class="small">Train your dream horses and become the ultimate champion</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/queryCMDS.js"></script>
+  <script src="js/logoutUser.js"></script>
+  <script src="js/myHorses.js"></script>
+</body>
+</html>

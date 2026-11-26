@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Stable Quest</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/color.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="auth-page1">
+  <header class="auth-topbar">
+    <a class="auth-brand" href="index.html">Stable Quest</a>
+    <a class="auth-back" href="index.html">← Back to Home</a>
+  </header>
+
+  <main class="auth-container">
+    <section class="auth-card">
+      <div class="auth-header">
+        <h1>Welcome Back</h1>
+        <p>Sign in to your trainer account</p>
+      </div>
+
+      <div class="auth-body">
+        <!-- ONE alert box only -->
+        <div id="alertBox"></div>
+
+        <form id="loginForm" class="auth-form" autocomplete="off">
+          <div class="form-group">
+            <label for="username" class="form-label">Trainer Username</label>
+            <input type="text" id="username" class="form-control" placeholder="Enter your username" autocomplete="username" required />
+          </div>
+
+          <div class="form-group mt-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" id="password" class="form-control" placeholder="Enter your password" autocomplete="current-password" required />
+          </div>
+
+          <!-- ONLY submit button, inside the form, with id -->
+          <button id="submitBtn" type="submit" class="btn btn-primary btn-lg w-100 mt-4">
+            Sign In
+          </button>
+        </form>
+
+        <div class="auth-footer mt-4">
+          <p class="mb-2">Don’t have an account? <a href="register.html">Create one here</a></p>
+          <p class="text-muted small mb-0">We never share your data without permission</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/queryCmds.js"></script>
+  <script src="js/loginUser.js"></script>
+</body>
+</html>

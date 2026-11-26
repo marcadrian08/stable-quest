@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stable Quest</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="css/color.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+  <body class="home">
+    <!-- Header Hero Section -->  
+    <header class="hero">
+<nav class="navbar navbar-expand-lg navbar-light bg-light bg-opacity-75 fixed-top">
+  <div class="container-fluid px-4">
+    
+    <!-- Brand = Home -->
+    <a class="navbar-brand fw-bold" href="index.html">Stable Quest</a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-lg-center">
+
+        <!-- Core game pages -->
+        <li class="nav-item">
+          <a class="nav-link" href="myHorses.html">My Horses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="shop.html">Gacha</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="wellnessChallenge.html">Challenges</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="badge.html">Achievements</a>
+        </li>
+
+        <!-- Auth -->
+        <li class="nav-item" id="navLogin">
+          <a class="nav-link" href="login.html">Login</a>
+        </li>
+        <li class="nav-item" id="navRegister">
+          <a class="nav-link" href="register.html">Register</a>
+        </li>
+
+        <!-- Logged-in only -->
+        <li class="nav-item d-none" id="navProfile">
+          <a class="nav-link" href="profile.html">Profile</a>
+        </li>
+        <li class="nav-item d-none" id="navLogout">
+          <a class="nav-link" href="#" id="logoutBtn">Logout</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+      <!-- Hero Center Text -->
+      <div class="bannerText">
+        <h1>Your Horse Training Adventure Starts Here</h1>
+        <h2>Train horses · Complete challenges · Earn achievements</h2>
+      </div>
+
+    </header>
+    
+    <!----------------Main------------------------> 
+    <main class="page">
+
+    <!-- My Horses -->
+    <section class="portal-row bg-green">
+        <img src="myHorses.jpg" alt="My Horses">
+      <a class="portal-card" href="myHorses.html" data-protected="true">
+        <span class="portal-tag">Stable</span>
+        <h2>My Horses</h2>
+        <p>Take a look at your current horses</p>
+        <span class="portal-cta">← My Stable</span>
+      </a>
+
+    </section>
+
+    <!-- Gacha (reverse like your CA1 examples section) -->
+    <section class="portal-row reverse bg-beige">
+        <img src="gachaPull.png" alt="Gacha">
+      <a class="portal-card" href="shop.html" data-protected="true">
+        <h2>Gacha</h2>
+        <p>Scout new horses and support cards to build your team.</p>
+        <span class="portal-cta">Scout Now →</span>
+      </a>
+    </section>
+
+    <!-- Challenges -->
+    <section class="portal-row bg-softgreen">
+        <img src="challenge.jpg" alt="Wellness Challenges">
+      <a class="portal-card" href="wellnessChallenge.html" data-protected="true">
+        <h2>Wellness Challenges</h2>
+        <p>Complete quests in real life and earn coins, XP, and rewards.</p>
+        <span class="portal-cta">← Take a Challenge</span>
+      </a>
+    </section>
+
+    <!-- Achievements (reverse) -->
+    <section class="portal-row reverse bg-blue">
+      <img src="badge.jpg" alt="Achievements">
+      <a class="portal-card" href="badge.html" data-protected="true">
+        <h2>Achievements</h2>
+        <p>Unlock badges and track your progress.</p>
+        <span class="portal-cta">View Badges →</span>
+      </a>
+    </section>
+
+
+</main>
+
+
+  <!-- Footer -->
+  <footer class="mt-auto py-4">
+    <div class="container text-center">
+      <p class="mb-1">Horse Racing Championship © 2026</p>
+      <p class="small">Train your dream horses and become the ultimate champion</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="js/userNavbarToggle.js"></script> -->
+  <script src="js/index.js"></script>
+  <script src="js/logoutUser.js"></script>
+</body>
+</html>

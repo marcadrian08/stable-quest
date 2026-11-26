@@ -1,0 +1,182 @@
+body.home {
+  background-color: #c9dccf;
+}
+
+
+
+
+/* keep your header simple */
+.pageHeader {
+  padding-top: 110px;
+  padding-bottom: 20px;
+  text-align: center;   /* ← this is the key */
+}
+
+
+.stableWrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px 30px;
+  flex: 1;
+}
+
+
+/* section background like your index */
+.stableSection {
+  border-radius: 18px;
+  padding: 22px;
+}
+
+.stableInner {
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 18px;
+  padding: 18px;
+  border: 2px solid rgba(44, 62, 80, 0.08);
+  backdrop-filter: blur(6px);
+}
+
+/* 2-column layout (1 column on small screen) */
+.horseGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 900px) {
+  .horseGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* horse card */
+.horseCard {
+  background: rgba(240, 248, 255, 0.85);
+  border-radius: 18px;
+  padding: 16px;
+  border: 2px solid rgba(44, 62, 80, 0.08);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.10);
+}
+
+/* top row */
+.horseTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.horseName {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #2c3e50;
+}
+
+.rarityBadge {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.85rem;
+  border: 2px solid rgba(0,0,0,0.08);
+}
+
+/* simple rarity colours */
+.rarity-common { background: rgba(148, 163, 184, 0.25); color: #334155; }
+.rarity-rare { background: rgba(59, 130, 246, 0.18); color: #1e3a8a; }
+.rarity-epic { background: rgba(168, 85, 247, 0.18); color: #5b21b6; }
+.rarity-legendary { background: rgba(245, 158, 11, 0.20); color: #92400e; }
+
+/* stats */
+.statList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #34495e;
+}
+
+.statList li {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  font-size: 0.95rem;
+}
+
+.horseActions {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btnCute {
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-weight: 700;
+}
+
+/* alert box hidden by default */
+#alertBox { display: none; }
+/* Push footer to bottom even when there are no horses */
+body.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Empty-state box (cute + centered) */
+.emptyState {
+  text-align: center;
+  padding: 28px 12px;
+}
+
+.emptyCard {
+  max-width: 520px;
+  margin: 0 auto;
+  background: rgba(240, 248, 255, 0.85);
+  border-radius: 18px;
+  padding: 22px;
+  border: 2px solid rgba(44, 62, 80, 0.08);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.10);
+}
+/* make page use full width nicely */
+.stableWrap{
+  width: 100%;
+  max-width: 1400px;   /* bigger than before */
+  margin: 0 auto;
+  padding-bottom: 30px;
+  flex: 1;
+}
+
+/* coins pill */
+.coinsPill{
+  background: rgba(255,255,255,0.75);
+  border: 2px solid rgba(44, 62, 80, 0.10);
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-weight: 700;
+}
+
+/* 3 columns on big screens, 2 on medium, 1 on small */
+.horseGrid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 1200px){
+  .horseGrid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 900px){
+  .horseGrid{ grid-template-columns: 1fr; }
+}
+.coinsWrap {
+  position: absolute;
+  top: 100px;        /* below navbar */
+  right: 24px;
+  background: white;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}

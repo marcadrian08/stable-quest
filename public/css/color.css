@@ -1,0 +1,107 @@
+:root
+{
+    --primary-dark: #0f1724;
+    --primary-lighter: #e9eef3;
+    --primary-gold: #d4af37;
+    --primary-teal: #17a2b8;
+    --primary-accent: #f59e0b;
+    
+    /* Additional Colors */
+    --dark-bg: #f5f7fa;
+    --card-bg: #ffffff;
+    --text-light: #0f1724;
+    --text-muted: #6b7280;
+    --border-color: #e6e9ee;
+    
+    /* Legacy colors for backward compatibility */
+    --custom-color: #d4af37;
+    --custom-color-darker: #b8971e;
+    --custom-color-light: #e5c158;
+    --custom-color-rgb: 212, 175, 55;
+    --custom-color-light-rgb: 229, 193, 88;
+    --custom-text-color: #ffffff;
+}
+
+.accordion
+{
+    --bs-accordion-btn-focus-border-color: var(--primary-gold);
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+    --bs-accordion-active-bg: rgba(212, 175, 55, 0.1);
+    --bs-accordion-active-color: var(--primary-gold);
+}
+
+.btn-primary {
+    --bs-btn-bg: var(--primary-gold);
+    --bs-btn-border-color: var(--primary-gold);
+    --bs-btn-hover-bg: var(--primary-accent);
+    --bs-btn-hover-border-color: var(--primary-accent);
+    --bs-btn-active-bg: var(--primary-accent);
+    --bs-btn-active-border-color: var(--primary-accent);
+    --bs-btn-disabled-bg: rgba(212, 175, 55, 0.5);
+    --bs-btn-disabled-border-color: rgba(212, 175, 55, 0.5);
+    color: var(--primary-dark) !important;
+    background-color: var(--primary-gold) !important;
+    border-color: var(--primary-gold) !important;
+}
+
+.bg-primary {
+    --bs-bg-opacity: 1;
+    background-color: rgba(26, 32, 44, var(--bs-bg-opacity)) !important;
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-gold);
+    border-color: var(--primary-accent);
+}
+
+.form-control:focus, 
+.form-check-input:focus {
+    border-color: var(--primary-gold);
+    box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.2);
+}
+
+footer {
+    color: var(--custom-text-color);
+}
+
+.accordion
+{
+    --bs-accordion-btn-focus-border-color: var(--custom-color-light);
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem var(--custom-color-light);
+    --bs-accordion-active-bg: var(--custom-color-light);
+    --bs-accordion-active-color: var(--custom-color-darker);
+}
+
+.btn-primary {
+    --bs-btn-bg: var(--custom-color);
+    --bs-btn-border-color: var(--custom-color);
+    --bs-btn-hover-bg: var(--custom-color-darker);
+    --bs-btn-hover-border-color: var(--custom-color-darker);
+    --bs-btn-active-bg: var(--custom-color-light);
+    --bs-btn-active-border-color: var(--custom-color-light);
+    --bs-btn-disabled-bg: var(--bs-success-rgb);
+    --bs-btn-disabled-border-color: var(--bs-success-rgb);
+    color: var(--primary-dark) !important;
+    background-color: var(--custom-color) !important;
+    border-color: var(--custom-color) !important;
+}
+
+.bg-primary {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--custom-color-rgb),var(--bs-bg-opacity))!important;
+}
+
+.form-check-input:checked {
+    background-color: var(--custom-color);
+    border-color: var(--custom-color);
+}
+
+.form-control:focus, 
+.form-check-input:focus {
+    border-color: rgba(var(--custom-color-light-rgb), 0.8);
+    box-shadow: 0 0 0 4px rgba(var(--custom-color-light-rgb), 0.6);
+}
+
+footer {
+    color: var(--custom-text-color);
+}

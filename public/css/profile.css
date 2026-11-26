@@ -1,0 +1,63 @@
+.profileMain {
+  padding-top: 110px; /* because navbar is fixed-top */
+}
+
+.profileTitle {
+  font-family: "Sour Gummy", cursive;
+  font-weight: 800;
+}
+
+.profileCard {
+  border-radius: 18px;
+  background: rgba(240, 248, 255, 0.85);
+  backdrop-filter: blur(6px);
+}
+
+footer {
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+}
+
+footer p {
+  font-size: 1.05rem;
+}
+
+footer .small {
+  font-size: 0.95rem;
+}
+html, body {
+  height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #f7e4cf; 
+}
+
+/* push the whole profile section down a bit */
+.profile-wrap {
+  margin-top: 100px;  /* increase/decrease this */
+}
+
+
+/* Bigger profile card */
+.card {
+  border-radius: 1.25rem;
+}
+
+.card-body {
+  padding: 3rem !important;
+}
+
+/* Bigger labels */
+#viewMode .fw-semibold {
+  font-size: 1.15rem;
+}
+
+/* Bigger values */
+#displayUsername,
+#displayCoins {
+  font-size: 1.5rem;
+  font-weight: 600;
+}

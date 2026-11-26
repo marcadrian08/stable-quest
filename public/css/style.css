@@ -1,0 +1,466 @@
+/* =========================================================
+   GLOBAL RESET + BASE
+   Basic reset to keep spacing and sizing consistent across browsers.
+========================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Default font for the whole site */
+body {
+  font-family: 'Sour Gummy', 'Poppins', Arial, sans-serif;
+}
+
+/* Limit hover zoom to only specific sections (prevents every image on site zooming) */
+.portal-row img:hover,
+.stats-section img:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
+}
+
+/* =========================================================
+   HERO (HOME)
+   Full-screen landing section with background image and centered content.
+========================================================= */
+.hero {
+  height: 100vh;
+  background: url('../../horseHero.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Semi-transparent overlay to make text easier to read on top of the image */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(255, 255, 255, 0.25);
+  z-index: 0;
+}
+
+/* Main hero text block */
+.bannerText {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 40px 60px;
+  border-radius: 12px;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+  max-width: 800px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero heading styling */
+.bannerText h1 {
+  font-size: 3.2rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+/* Hero subheading styling */
+.bannerText h2 {
+  font-size: 1.4rem;
+  color: #34495e;
+}
+
+/* Utility wrapper for pages where you want to control top spacing */
+.page {
+  padding-top: 0px;
+}
+
+/* =========================================================
+   PORTAL CARD POLISH (game menu feel)
+   Slight border + blur to make portal cards look more "game hub" style.
+========================================================= */
+.portal-card {
+  border: 2px solid rgba(44, 62, 80, 0.08);
+  backdrop-filter: blur(6px);
+}
+
+/* Keep portal text nicely centered and not too wide */
+.portal-card p {
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+/* Stronger visual feedback on hover */
+.portal-card:hover {
+  border-color: rgba(52, 131, 226, 0.35);
+}
+
+/* =========================================================
+   PORTAL TAG
+   Small pill label that can be used as a section/category tag.
+========================================================= */
+.portal-tag {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  background: rgba(52, 131, 226, 0.12);
+  color: #2c3e50;
+  margin: 0 auto 12px;
+}
+
+/* =========================================================
+   LOCKED STATE
+   Visual style + click prevention for portal cards that require login.
+========================================================= */
+.portal-card.locked {
+  opacity: 0.75;
+  filter: grayscale(0.15);
+  cursor: not-allowed;
+  pointer-events: none; /* stops clicking */
+}
+
+/* Adds a small hint text after the call-to-action when locked */
+.portal-card.locked .portal-cta::after {
+  content: " (Login required)";
+  font-weight: 400;
+  opacity: 0.85;
+}
+
+/* =========================================================
+   HERO SCROLL CUE
+   Small pill at the bottom of the hero section to hint scrolling.
+========================================================= */
+.scroll-cue {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  color: #2c3e50;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* =========================================================
+   AUTH PAGES (LOGIN / REGISTER)
+   Two variants of auth page backgrounds.
+========================================================= */
+.auth-page1 {
+  min-height: 100vh;
+  background: url('../../horseHero.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+.auth-page2 {
+  min-height: 100vh;
+  background: url('../../register.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+/* Shared overlay layer for auth pages (softens background) */
+.auth-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.35);
+  z-index: 0;
+}
+
+/* Top bar on login/register pages */
+.auth-topbar {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 28px;
+  background: rgba(255, 255, 255, 0.70);
+  backdrop-filter: blur(6px);
+}
+
+/* Brand link on auth pages */
+.auth-brand {
+  font-weight: 800;
+  text-decoration: none;
+  color: #2c3e50;
+  font-size: 1.2rem;
+}
+
+/* Back link on auth pages */
+.auth-back {
+  text-decoration: none;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.auth-back:hover {
+  text-decoration: underline;
+}
+
+/* Centers the auth card vertically and horizontally */
+.auth-container {
+  position: relative;
+  z-index: 1;
+  min-height: calc(100vh - 64px);
+  display: grid;
+  place-items: center;
+  padding: 28px 16px;
+}
+
+/* Main auth card styling */
+.auth-card {
+  width: min(560px, 92vw);
+  background: rgba(240, 248, 255, 0.78);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.20);
+  border: 2px solid rgba(44, 62, 80, 0.08);
+  overflow: hidden;
+}
+
+/* Header section inside auth card */
+.auth-header {
+  padding: 26px 28px 10px;
+  text-align: center;
+}
+
+.auth-header h1 {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 6px;
+}
+
+.auth-header p {
+  color: #34495e;
+  margin-bottom: 0;
+}
+
+/* Body content inside auth card */
+.auth-body {
+  padding: 18px 28px 26px;
+}
+
+/* Footer links inside auth card */
+.auth-footer a {
+  font-weight: 700;
+}
+
+/* Password strength meter container */
+.strength-meter {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(44, 62, 80, 0.12);
+  overflow: hidden;
+}
+
+/* Filled portion of the strength meter */
+.strength-meter-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 999px;
+  background: rgba(52, 131, 226, 0.6);
+}
+
+/* Each password requirement row */
+.password-requirements .requirement {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 6px 0;
+}
+
+/* =========================================================
+   NAV LINK STYLING
+   General styling for nav links in your header/menus.
+========================================================= */
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+nav a:hover {
+  color: rgb(52, 131, 226);
+  text-decoration: underline;
+}
+
+/* Visible focus style for keyboard navigation */
+nav a:focus {
+  outline: 2px dashed #3483e2;
+  outline-offset: 4px;
+}
+
+/* =========================================================
+   PORTAL SECTIONS
+   Home page "menu" sections: image + clickable card linking to feature pages.
+========================================================= */
+.portal-row {
+  align-items: center;
+  justify-content: center;
+  padding: 30px 2%;
+  display: flex;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+/* Portal images */
+.portal-row img {
+  border-radius: 12px;
+  width: 600px;
+  height: 350px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Clickable portal card next to image */
+.portal-card {
+  background-color: rgba(240, 248, 255, 0.70);
+  padding: 10px 40px 30px 40px;
+  width: 600px;
+  height: 350px;
+  font-size: 1.2rem;
+  line-height: 2.0;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  text-align: center;
+
+  text-decoration: none;
+  color: #34495e;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Portal card heading */
+.portal-card h2 {
+  font-size: 2.3rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* Portal card hover lift */
+.portal-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.45);
+}
+
+/* Call-to-action line inside portal card */
+.portal-cta {
+  margin-top: 12px;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+/* Reverse layout helper for alternating rows */
+.portal-row.reverse img { order: 2; }
+.portal-row.reverse .portal-card { order: 1; }
+
+/* =========================================================
+   BACKGROUND COLOUR UTILS
+   Simple helpers for section background colours.
+========================================================= */
+.bg-green     { background-color: rgb(230, 244, 234); }
+.bg-beige     { background-color: rgb(245, 245, 220); }
+.bg-softgreen { background-color: rgb(216, 234, 210); }
+.bg-blue      { background-color: rgb(227, 242, 253); }
+.bg-peach     { background-color: rgb(255, 249, 240); }
+
+/* =========================================================
+   OPTIONAL: STATS SECTION
+   Full-screen image section with a text box overlay.
+========================================================= */
+.stats-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(198, 252, 177);
+  overflow: hidden;
+}
+
+.stats-section img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text overlay for stats section */
+.stats-text {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  background-color: rgba(240, 248, 255, 0.85);
+  padding: 30px 40px;
+  max-width: 450px;
+  color: #34495e;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  font-size: 1.25rem;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.stats-text h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 2.2rem;
+}
+
+/* =========================================================
+   FOOTER
+   Simple dark footer with centered text.
+========================================================= */
+footer {
+  background-color: rgb(32, 37, 42);
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+}
+
+footer p {
+  margin: 10px;
+}
+
+/* =========================================================
+   RESPONSIVE
+   Makes portal layout fit smaller screens without horizontal overflow.
+========================================================= */
+@media (max-width: 1200px) {
+  .portal-row img,
+  .portal-card {
+    width: 92vw;
+    max-width: 700px;
+    height: auto;
+    min-height: 320px;
+  }
+
+  .portal-card {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .bannerText {
+    padding: 25px;
+    width: 92%;
+  }
+
+  .bannerText h1 {
+    font-size: 2.4rem;
+  }
+
+  .bannerText h2 {
+    font-size: 1.1rem;
+  }
+}

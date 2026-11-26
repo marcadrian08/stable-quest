@@ -1,0 +1,125 @@
+body.home{
+  background-color: #dcd5fd;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.pageHeader{
+  padding-top: 110px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.achWrap{
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  flex: 1;
+}
+
+#alertBox{ display: none; }
+
+.coinsPill{
+  background: rgba(255,255,255,0.75);
+  border: 2px solid rgba(44, 62, 80, 0.10);
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-weight: 700;
+}
+
+.softCard{
+  background: rgba(255,255,255,0.65);
+  border-radius: 18px;
+  padding: 18px;
+  border: 2px solid rgba(44, 62, 80, 0.08);
+  backdrop-filter: blur(6px);
+}
+
+.fw-black{ font-weight: 900; }
+
+.expPill{
+  background: rgba(240,248,255,0.85);
+  border: 2px solid rgba(44, 62, 80, 0.10);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-weight: 800;
+}
+
+.currentBadgeBox{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(240, 248, 255, 0.85);
+  border: 2px solid rgba(44, 62, 80, 0.08);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+
+.badgeIcon{
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.7);
+  border: 2px solid rgba(44, 62, 80, 0.08);
+}
+
+.progressTall{
+  height: 16px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.badgeGrid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+@media (max-width: 900px){
+  .badgeGrid{ grid-template-columns: 1fr; }
+}
+
+.badgeTier{
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(240, 248, 255, 0.85);
+  border: 2px solid rgba(44, 62, 80, 0.08);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.badgeTier.locked{
+  opacity: 0.65;
+  filter: grayscale(0.2);
+}
+
+.badgeTier.current{
+  outline: 3px solid rgba(25, 135, 84, 0.35); /* bootstrap success-ish */
+}
+
+.badgeName{
+  margin: 0;
+  font-weight: 900;
+  color: #2c3e50;
+}
+
+.badgeReq{
+  font-weight: 800;
+  border-radius: 999px;
+  padding: 6px 10px;
+  border: 2px solid rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.65);
+  white-space: nowrap;
+}
+
+.smallMuted{ color: #64748b; font-size: 0.9rem; }
+

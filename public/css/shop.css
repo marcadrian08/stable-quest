@@ -1,0 +1,13 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffd7e8;
+}
+.gacha-img{
+  max-height: 460px;
+  object-fit: cover;
+}

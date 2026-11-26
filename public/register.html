@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register - Stable Quest</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/color.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="auth-page2">
+  <header class="auth-topbar">
+    <a class="auth-brand" href="index.html">Stable Quest</a>
+    <a class="auth-back" href="login.html">← Back to Login</a>
+  </header>
+
+  <main class="auth-container">
+    <section class="auth-card">
+      <div class="auth-header">
+        <h1>Join Stable Quest</h1>
+        <p>Create your trainer account and start your journey</p>
+      </div>
+
+      <div class="auth-body">
+        <!-- ONE alert box only -->
+        <div id="alertBox"></div>
+
+        <form id="registerForm" class="auth-form" autocomplete="new-password">
+          <div class="form-group">
+            <label for="username" class="form-label">Trainer Username</label>
+            <input type="text" id="username" class="form-control" placeholder="Choose your trainer name" autocomplete="off" required />
+          </div>
+
+          <div class="form-group mt-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" id="password" class="form-control" placeholder="Create a strong password" autocomplete="new-password" required />
+
+            <div id="passwordStrength" class="password-strength mt-3" style="display:none;">
+              <div class="strength-meter">
+                <div id="strengthMeterFill" class="strength-meter-fill"></div>
+              </div>
+              <small class="strength-text">Password strength: <span id="strengthText">Weak</span></small>
+            </div>
+
+            <div id="requirements" class="password-requirements mt-3" style="display:none;">
+              <small class="d-block mb-2 fw-bold">Password Requirements:</small>
+              <div class="requirement">
+                <span id="req-length" class="requirement-icon">✗</span>
+                <span class="requirement-text">At least 8 characters</span>
+              </div>
+              <div class="requirement">
+                <span id="req-uppercase" class="requirement-icon">✗</span>
+                <span class="requirement-text">At least one uppercase letter</span>
+              </div>
+              <div class="requirement">
+                <span id="req-number" class="requirement-icon">✗</span>
+                <span class="requirement-text">At least one number</span>
+              </div>
+              <div class="requirement">
+                <span id="req-special" class="requirement-icon">✗</span>
+                <span class="requirement-text">At least one special character (@, #, $, etc)</span>
+              </div>
+            </div>
+          </div>
+
+          <button id="submitBtn" type="submit" class="btn btn-primary btn-lg w-100 mt-4">
+            Create Account
+          </button>
+        </form>
+
+        <div class="auth-footer mt-4">
+          <p class="mb-2">Already have an account? <a href="login.html">Sign in here</a></p>
+          <p class="text-muted small mb-0">By registering, you agree to our terms of service</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/queryCmds.js"></script>
+  <script src="js/registerUser.js"></script>
+</body>
+</html>
