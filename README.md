@@ -4,6 +4,14 @@ A gamified wellness web app. Users complete wellness challenges to earn coins, t
 
 Built as a full-stack school project for the Back-End Development module at Singapore Polytechnic (Jan – Feb 2026).
 
+
+## Screenshots
+
+| Wellness Challenges | Gacha Shop |
+|---|---|
+| ![Wellness Challenges page](screenshots/challenges.jpeg) | ![Gacha shop](screenshots/gacha.jpeg) |
+| **My Stable** | **Trainer Achievements** |
+| ![My Stable page](screenshots/horses.jpeg) | ![Trainer Achievements page](screenshots/badges.jpeg) |
 ## Features
 
 - **Accounts:** register and log in, with hashed passwords (bcrypt) and token-based login (JWT)
